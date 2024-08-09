@@ -1,0 +1,9 @@
+When you click on the "Send" button, the page makes a POST request to the server (
+https://studies.cs.helsinki.fi/exampleapp/new_note) of type text/html; charset=utf-8
+containing the user's note in the following format
+
+note="user note"
+
+To which the server responds with "302 Found".
+
+Then, it makes a GET request to "https://studies.cs.helsinki.fi/exampleapp/notes" obtaining the json of all the notes, with the new note that the user sent and updates the HTML.
